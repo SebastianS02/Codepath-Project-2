@@ -7,11 +7,35 @@ body {
 main {
   text-align: center;
   vertical-align: center;
-  line-height: 100vh
+  line-height: 100
 }
 
 .Flashcard {
-  width: 100px;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.Flashcard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.Flashcard-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.Flashcard-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
 
 .Flashcard h4,h3 {
@@ -28,4 +52,32 @@ main {
 
 .green {
   background:rgb(202, 245, 222);
+}
+
+.orange {
+  background: rgb(224, 122, 5);
+}
+
+.brown {
+  background: rgb(112, 63, 23);
+}
+
+.gray {
+  background: rgb(99, 99, 99);
+}
+
+.red {
+  background: rgb(255,0,0);
+}
+
+.yellow {
+  background: rgb(255, 238, 0);
+}
+
+.lightblue {
+  background: rgb(0, 255, 221);
+}
+
+.white {
+  background: rgb(255, 255, 255);
 }

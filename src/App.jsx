@@ -2,72 +2,86 @@ import { useState } from 'react'
 import './App.css'
 import Flashcard from './components/Flashcard'
 
-function App() {
-  const [questionCard, setQuestionCard] = useState(0);
-  const [answerCard, setAnswerCard] = useState(0);
-
-  const cardList = Flashcards;
-
-  return (
-    <div>
-      <h1>Learning Animals in Spanish!</h1>
-      <h2>How well do you know your animals in Spanish? Test it here!</h2>
-      <h3>Number of Cards: </h3>
-    </div>
-  )
-}
-
 const Flashcards = [
   {
     englishWord: "Dog",
     spanishWord: "Perro",
-    color: "blue"
+    difficulty: "easy"
   },
   {
     englishWord: "Cat",
     spanishWord: "Gato",
-    color: "pink"
+    difficulty: "easy"
   },
   {
     englishWord: "Frog",
     spanishWord: "Rana",
-    color: "green"
+    difficulty: "hard"
   },
   {
     englishWord: "Snake",
     spanishWord: "Serpiente",
-    color: "orange"
+    difficulty: "easy"
   },
   {
     englishWord: "Cow",
     spanishWord: "Vaca",
-    color: "brown"
+    difficulty: "medium"
   },
   {
     englishWord: "Elephant",
     spanishWord: "Elefante",
-    color: "gray"
+    difficulty: "easy"
   },
   {
     englishWord: "Turtle",
     spanishWord: "Tortuga",
-    color: "red"
+    difficulty: "medium"
   },
   {
     englishWord: "Turkey",
     spanishWord: "Pavo",
-    color: "yellow"
+    difficulty: "hard"
   },
   {
     englishWord: "Dolphin",
     spanishWord: "Delfin",
-    color: "lightblue"
+    difficulty: "easy"
   },
   {
     englishWord: "Raccoon",
     spanishWord: "Mapache",
-    color: "white"
+    difficulty: "hard"
   }
 ]
+
+const cardList = Flashcards;
+
+function App() {
+  const [currentCardi, setCurrentCardi] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+
+  const currentCard = cardList[currentCardi];
+
+  const handleNextCard = () => {
+    setFlipped(false);
+    setCurrentCardi(Math.floor(Math.random() * cardList.length));
+  }
+
+  return (
+    <div className="App">
+      <h1>Learning Animals in Spanish!</h1>
+      <h2>How well do you know your animals in Spanish? Test it here!</h2>
+      <h3>Number of Cards: {cardList.length}</h3>
+      <Flashcard
+        englishWord={currentCard.englishWord} 
+        spanishWord={currentCard.spanishWord} 
+        difficulty={currentCard.difficulty}
+        flipCard={flipped}
+        onCardClick={() => setFlipped(true)}/>
+        <button onClick={handleNextCard}>Next</button>
+    </div>
+  )
+}
 
 export default App
