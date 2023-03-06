@@ -20,7 +20,7 @@ The following **optional** features are implemented:
 
 - [ ] Cards contains images in addition to or in place of text
 - [X] Cards have different visual styles such as color based on their category
-  - [ ] *Cards differ between green, yellow, and red based on easy, medium, and hard difficulties, respectively*
+  - [X] *Cards differ between green, yellow, and red based on easy, medium, and hard difficulties, respectively*
 
 ## Video Walkthrough
 
