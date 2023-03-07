@@ -26,7 +26,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://im4.ezgif.com/tmp/ezgif-4-1792c430f9.gif'/>
+<img src='![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/96634770/223501942-a2d8afe9-59e2-4477-acf4-9a8a99b9c14b.gif)
+'/>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ezgif
