@@ -65,7 +65,22 @@ function App() {
 
   const handleNextCard = () => {
     setFlipped(false);
-    setCurrentCardi(Math.floor(Math.random() * cardList.length));
+    if(currentCardi == cardList.length - 1){
+      setCurrentCardi(0);
+    }
+    else{
+      setCurrentCardi(currentCardi + 1);
+    }
+  }
+
+  const handlePrevCard = () => {
+    setFlipped(false);
+    if(currentCardi <= 0){
+      setCurrentCardi(cardList.length - 1);
+    }
+    else{
+      setCurrentCardi(currentCardi - 1);
+    }
   }
 
   return (
@@ -80,6 +95,7 @@ function App() {
         flipCard={flipped}
         onCardClick={() => setFlipped(true)}/>
         <button onClick={handleNextCard}>Next</button>
+        <button onClick={handlePrevCard}>Previous</button>
     </div>
   )
 }
