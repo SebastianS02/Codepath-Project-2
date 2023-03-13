@@ -1,36 +1,41 @@
-# Web Development Project 2 - *Learning Animals in Spanish*
+# Web Development Project 3 - *Learning Animals in Spanish Part 2*
 
 Submitted by: **Sebastian Stec**
 
-This web app: **Allows you to scroll through numerous cards with animals on them in English using the "Next" button below the card. Upon clicking the card, the same animal is written now in Spanish.**
+This web app: **Allows the user to study their animals in Spanish using Flashcards. These flashcards can be shuffled through using the "Next" and "Previous" buttons, and their color changes depending on the difficulty (Green for easy, Yellow for medium, Red for hard). The user can enter their guess into a text box, and when they click the "Submit" button, the website will tell the user if their input was correct or incorrect, then flip the card to display the correct answer. The user can click on the card at any time to see the correct answer, but they will be unable to input their guess once this is done.**
 
-Time spent: **8** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [X] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [X] **A list of card pairs is created**
-- [X] **Clicking on the card shows the corresponding component of the information pair**
-- [X] **Clicking the next button displays a random new card**
+- [X] **The user can enter their guess in a box before seeing the flipside of the card**
+- [X] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [X] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [X] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [X] Cards have different visual styles such as color based on their category
-  - [X] *Cards differ between green, yellow, and red based on easy, medium, and hard difficulties, respectively*
+- [ ] A shuffle button is used to randomize the order of the cards
+- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
+
+The following **additional** features are implemented:
+
+* [X] Clicking "Next" on the last card will bring the user back to the first card in the deck.
+* [X] Clicking "Previous" on the first card will bring the user to the last card in the deck.
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/96634770/224789582-6f746d18-e6cb-40be-a741-4b76d4aaa8fe.gif)
 
-![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/96634770/223502312-5ba25004-2efa-4905-932e-eb968e45de01.gif)
+## Notes
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ezgif
+This web app is a continuation of Flashcards! Part 1. In this version, the user is able to enter a custom input into a text box with feedback based on their answer, and can go either forward or backwards in the deck. 
 
 ## License
 
