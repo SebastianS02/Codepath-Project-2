@@ -72,6 +72,7 @@ function App() {
     else{
       setCurrentCardi(currentCardi + 1);
     }
+    setUserInput('');
   }
 
   const handlePrevCard = () => {
@@ -82,11 +83,13 @@ function App() {
     else{
       setCurrentCardi(currentCardi - 1);
     }
+    setUserInput('');
   }
 
-  const onSubmit = () => {
+  const handleGuessSubmit = () => {
     if(currentCard.spanishWord != userInput){
-      alert("Wrong! Try again.");
+      setFlipped(true);
+      alert("Wrong!");
     }
     else{
       setFlipped(true);
@@ -99,15 +102,17 @@ function App() {
       <h1>Learning Animals in Spanish!</h1>
       <h2>How well do you know your animals in Spanish? Test it here!</h2>
       <h3>Number of Cards: {cardList.length}</h3>
+      <h4>Note: Please capitalize the first letter of your submission.</h4>
       <Flashcard
         englishWord={currentCard.englishWord} 
         spanishWord={currentCard.spanishWord} 
         difficulty={currentCard.difficulty}
         flipCard={flipped}
-        onCardClick={() => setFlipped(true)}/>
-        <button type="submit" className="button submit" onClick={onSubmit}>
-          Check Answer
-        </button>
+        onCardClick={() => setFlipped(true)}
+        userInput={userInput}
+        handleGuess={(e) => setUserInput(e.target.value)}
+        handleGuessSubmit={handleGuessSubmit}
+        />
         <button onClick={handleNextCard}>Next</button>
         <button onClick={handlePrevCard}>Previous</button>
     </div>
