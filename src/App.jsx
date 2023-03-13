@@ -60,6 +60,7 @@ const cardList = Flashcards;
 function App() {
   const [currentCardi, setCurrentCardi] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [userInput, setUserInput] = useState('');
 
   const currentCard = cardList[currentCardi];
 
@@ -83,6 +84,16 @@ function App() {
     }
   }
 
+  const onSubmit = () => {
+    if(currentCard.spanishWord != userInput){
+      alert("Wrong! Try again.");
+    }
+    else{
+      setFlipped(true);
+      alert("Correct!");
+    }
+  }
+
   return (
     <div className="App">
       <h1>Learning Animals in Spanish!</h1>
@@ -94,6 +105,9 @@ function App() {
         difficulty={currentCard.difficulty}
         flipCard={flipped}
         onCardClick={() => setFlipped(true)}/>
+        <button type="submit" className="button submit" onClick={onSubmit}>
+          Check Answer
+        </button>
         <button onClick={handleNextCard}>Next</button>
         <button onClick={handlePrevCard}>Previous</button>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import './Flashcard.css'
 
 const Flashcard = (props) => {
-    const {flipCard, onCardClick, difficulty, spanishWord, englishWord} = props;
+    const {flipCard, onCardClick, difficulty, spanishWord, englishWord, userInput, handleChange} = props;
 
     const getDifficulty = () => {
 		switch (difficulty) {
@@ -20,11 +20,21 @@ const Flashcard = (props) => {
     }
 
     return(
-        <div className="container">
+        <div className="container"> 
+       
             <div className="Flashcard" onClick={onCardClick} style={cardColor}>
                 <div className="Flashcard-content">
                     <div className="card-text">{flipCard ? spanishWord : englishWord}</div>
+                    
                 </div>
+            </div> 
+            <div className="input">
+                <input 
+                    type="text"
+                    placeholder="Input your answer here..."
+                    value={userInput}
+                    onChange={handleChange}
+                />
             </div>
         </div>
     )
